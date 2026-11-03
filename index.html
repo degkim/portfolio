@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dongeun Kim — Archive</title>
+  <script>try{var d=document.documentElement;d.dataset.t=localStorage.getItem('pf-theme')||0}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&family=Inter+Tight:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="archive">
+  <canvas id="wipe" aria-hidden="true"></canvas>
+  <canvas id="trail" aria-hidden="true"></canvas>
+  <div class="cursor" aria-hidden="true"><span class="cursor-label"></span></div>
+  <header class="site-head grid"></header>
+
+  <main>
+    <!-- Intro: searchsystem의 그리드·모노 정보 + yanniceberthault의 픽셀 이미지 -->
+    <section class="intro" id="intro">
+      <div class="intro-top grid">
+        <p class="i-bio">Dongeun Kim designs brand experience spaces in Seoul — campaigns, exhibitions and pop-ups, grounded in architecture.</p>
+        <p class="i-status"><span class="mute">Practice</span><br>Brand Campaign, Exhibition<br>Space &amp; Graphic Design</p>
+        <ol class="i-list" id="intro-list"></ol>
+        <p class="i-meta"><span class="mute">Selected work</span><br><span id="intro-count"></span><br><span id="intro-years"></span></p>
+      </div>
+      <div class="intro-stage grid">
+        <p class="lens-cap" id="lens-cap"></p>
+        <a class="lens-wrap" id="lens-link" href="project.html?p=01" data-wipe data-cursor="View"><canvas id="lens"></canvas></a>
+      </div>
+      <h1 class="intro-name sans" data-texture>Dongeun Kim</h1>
+      <div class="intro-foot grid">
+        <a class="u" href="#archive-bar">(Scroll) Archive ↓</a>
+        <span class="mute">Move the cursor over the image</span>
+        <span class="r">Seoul — 37.56° N, 126.97° E</span>
+      </div>
+    </section>
+
+    <div class="bar grid" id="archive-bar">
+      <span>(01)</span>
+      <span id="arc-title">Archive</span>
+      <span class="mute" id="arc-count"></span>
+      <span class="bar-r"><button type="button" data-view="explore" class="u">Explore ↗</button></span>
+    </div>
+    <div class="archive" id="archive"></div>
+
+    <div class="explore" id="explore" data-cursor="Drag">
+      <div class="ex-field"></div>
+      <div class="ex-bar grid">
+        <span>(02) Explore</span>
+        <span class="mute">Drag or scroll to move</span>
+        <span class="bar-r"><button type="button" data-view="archive" class="u">Close ×</button></span>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-foot grid"></footer>
+  <div class="preview" aria-hidden="true"><div class="media is-in is-color"><img alt=""><canvas></canvas></div></div>
+
+  <script src="project/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
